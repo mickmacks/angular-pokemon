@@ -5,7 +5,7 @@
  */
 
 angular
-  .module('tunely', ['ngRoute'])
+  .module('pokedex', ['ngRoute'])
   .config(config);
 
 config.$inject = ['$routeProvider', '$locationProvider'];
@@ -13,15 +13,15 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: '/templates/albums',
-      controllerAs: 'albumsIndexCtrl',
-      controller: 'AlbumsIndexController'
+      templateUrl: '/templates/pokedex-index',
+      controllerAs: 'pokesexIndexCtrl',
+      controller: 'PokedexIndexController'
     })
-    .when('/albums/:id', {
-      templateUrl: '/templates/albums-show',
-      controllerAs: 'albumsShowCtrl',
-      controller: 'AlbumsShowController'
-    })
+    // .when('/pokedex/:id', {
+    //   templateUrl: '/templates/pokemon-show',
+    //   controllerAs: 'PokemonShowCtrl',
+    //   controller: 'PokemonShowController'
+    // })
 
     $locationProvider.html5Mode({
       enabled: true,

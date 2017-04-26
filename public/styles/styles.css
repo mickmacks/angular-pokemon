@@ -1,11 +1,19 @@
-.jumbotron {
-  background-image: url(/images/background1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #EEE;
+
+/*   T A G S   */
+
+h1 {
+
+	color: #111,
+	font-size: 30px;
+
 }
-.jumbotron .container {
-  height: 350px;
+
+/*   C L A S S E S   */
+
+.hero {
+
+	margin-top: 100px;
+	background-color: #111111;
 }
 
 .inline-header {
@@ -17,3 +25,7 @@
 .hidden {
   display: none;
 }
+
+/*   I D S   */
+
+/*   A N I M A T I O N S   */

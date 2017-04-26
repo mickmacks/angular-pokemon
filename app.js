@@ -4,6 +4,9 @@
  *
  */
 
+ 
+console.log('TEST JS')
+
 angular
   .module('pokedex', ['ngRoute'])
   .config(config);
@@ -13,8 +16,8 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: '/templates/pokedex-index',
-      controllerAs: 'pokesexIndexCtrl',
+      templateUrl: '/templates/pokedex-index.html',
+      controllerAs: 'pokedexIndexCtrl',
       controller: 'PokedexIndexController'
     })
     // .when('/pokedex/:id', {
@@ -22,6 +25,9 @@ function config ($routeProvider, $locationProvider) {
     //   controllerAs: 'PokemonShowCtrl',
     //   controller: 'PokemonShowController'
     // })
+    .otherwise({
+      redirectTo: '/'
+    });
 
     $locationProvider.html5Mode({
       enabled: true,
